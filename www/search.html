@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>Search Page</title>
+    <meta name="description" content="">
+
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./includes/css/profile_styles.css" rel="stylesheet">
+
+    <!-- Include Modernizr in the head, before any other Javascript -->
+    <script src="./includes/js/modernizr-2.6.2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+		<script type="text/javascript">
+		window.onload = function() 
+		{
+			var value = window.localStorage.getItem("username");
+				
+				if(value == null)
+				 {
+					window.location = "index.html";
+				 }
+		};
+		</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#myTab a").click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+	
+	<script src="js/search.js"></script>
+	
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="container" id="main">
+       <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse navbar-responsive-collapse" id="pushdown">
+
+
+                    <ul class="nav navbar-nav">
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><font color="white"><b>My Account</b></font><strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="editProfile.html">
+                                        <span class="glyphicon glyphicon-wrench"></span>Update Account
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="logout.html">
+                                        <span class="glyphicon glyphicon-off"></span>Sign out
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <a class="navbar-brand pull-right" href="/">
+                        <img src="./images/logo.jpg" alt="Your Logo" class="hidden-sm">
+                    </a>
+
+
+
+                </div>
+                <!--nav collapse ends-->
+                <a class="navbar-brand pull-left" href="/">
+                    <img src="./images/logo.jpg" alt="Your Logo" class="visible-sm" id="aligncenter">
+                </a>
+            </div>
+            <!--navbar container ends-->
+
+        </div>
+        <!--navbar ends-->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="row">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#sectionA">By Name</a></li>
+                <li><a href="#sectionB">By Tags</a></li>
+                
+            </ul>
+
+            <div class="tab-content">
+                <div id="sectionA" class="tab-pane fade in active">
+                    <h3>Search By Name</h3>
+						<div class="input-group">
+							<input type="text" id="searchByNameId" class="form-control" placeholder="Input Name">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" onclick="searchByName();"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+						</div>
+						<div id="result1" ></div>
+				</div>
+                <div id="sectionB" class="tab-pane fade">
+                   <h3>Search By Tags</h3>
+						<div class="input-group">
+							<input type="text" id="searchByTagId" class="form-control" placeholder="Input Tag Name">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" onclick="searchByTag();"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+						</div>
+						<div id="result2"></div>
+					
+				</div>
+                
+            </div>
+        </div>
+
+    </div>
+
+	
+
+    <nav class="navbar-bottom navbarFooter" id="navbarFooter" role="navigation">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="index.html" class="backcolor"><span class="input-group-addon " id="basic-addon1"><span class="glyphicon glyphicon-home "></span></span></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="camera.html" class="backcolor"><span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-camera"></span></span></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="search.html" class="backcolor"><span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="profile.html" class="backcolor"><span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span></a>
+                    </div>
+                </div>
+                <!--row-ends-->
+            </div>
+            <!--Footer-container-ends-->
+
+
+
+
+        </div>
+    </nav>
+
+    <!-- All Javascript at the bottom of the page for faster page loading -->
+    <!-- First try for the online version of jQuery-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <!-- If no online access, fallback to our hardcoded version of jQuery -->
+    <script>window.jQuery || document.write('<script src="./includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./includes/js/script.js"></script>
+	  <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+</body>
+</html>
+
