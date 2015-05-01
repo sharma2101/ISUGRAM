@@ -36,7 +36,7 @@
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		
-		<script src="js/jquery.simpleFilter.js"></script>
+		<script src="js/editImage.js"></script>
 		
 		<script type="text/javascript">
 		window.onload = function() 
@@ -55,90 +55,30 @@
       
 			<div data-role="page" data-theme="d" id="click"> <!--page1 start-->
 					<div data-role="header" data-theme="b"> 
-						<h1> Home </h1>
+						<h1> Change Profile Pic </h1>
 							<div data-role="navbar">
 								<ul>
-									<li><a href="index.html" class="ui-btn-active ui-state-persist">Back</a></li>
-									<li><a href="#edit" >Edit</a></li>
+									<li><a href="profile.html" class="ui-btn-active ui-state-persist">Back</a></li>
+									<li></li>
 								</ul>
 							</div><!-- /navbar -->
 					</div>
 			
 					<div data-role="content">
-					   <img style="display:none;width:100%;height:80%;" id="smallImage" src="" />		
+					   <img style="display:block;width:100%;height:80%;" id="smallImage" src="" />		
 					</div>
 					
 					<div data-role="footer" data-theme="b"> 
 						<div data-role="navbar">
 								<ul>
-									<li><button onclick="capturePhotoEdit();">Capture Editable Photo</button> </li>
-									<li><button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button></li>
+									<li><button onclick="capturePhotoEdit();">Take Photo</button> </li>
+									<li><button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Chooose from existing</button></li>
 								</ul>
 						</div><!-- /navbar -->
 					</div> 
 			 </div> <!--page1 end take pic-->
 			 
-			  <div data-role="page" data-theme="d" id="edit"> <!--page2 start-->
-				<div data-role="header" data-theme="b"> 
-							<h1> EDIT </h1>
-								<div data-role="navbar">
-									<ul>
-										<li><a href="#click" class="ui-btn-active ui-state-persist">Back</a></li>
-										<li><a href="#post" >Post</a></li> 
-									</ul>
-							</div><!-- /navbar -->
-				</div>
-				
-						<div data-role="content">
-						   
-									<img style="display:none;width:100%;height:80%;" id="sourceImage" class="test" src="" />
-									
-									
-						</div>
-						
-						<div data-role="footer" data-theme="b"> 
-							<div data-role="navbar">
-									<ul>
-										<li><button onclick="GrayscalePhotoEdit();">Grayscale</button></li>
-										<li><button onclick="vintagePhotoEdit();">Vintage</button></li>
-										<li><button onclick="luxenPhotoEdit();">Luxen</button></li>
-										<li><button onclick="beachPhotoEdit();">Beach</button></li>
-										<li><button onclick="vignettePhotoEdit();">Vignette</button></li>
-										<li><button onclick="resetPic();">Reset</button></li>
-									</ul>
-							</div><!-- /navbar -->
-						</div> 
-			 </div> <!--page2 end edit pic-->
 			 
-			 
-			 
-			 <div data-role="page" data-theme="d" id="post"> <!--page3 start-->
-				<div data-role="header" data-theme="b"> 
-							<h1> POST </h1>
-								<div data-role="navbar">
-									<ul>
-										<li><a href="#edit" class="ui-btn-active ui-state-persist">Back</a></li>
-										<li></li> 
-									</ul>
-							</div><!-- /navbar -->
-				</div>
-				
-						<div data-role="content">
-						   
-									<img style="display:none;width:60px;height:60px;" id="smallImage2" src="" class="test"/>
-									<input type="text" name="caption" id="caption" /><br />
-									<div id="images"> </div>
-						</div>
-						
-						<div data-role="footer" data-theme="b"> 
-							<div data-role="navbar">
-									<ul>
-										<li><button onclick="AddValueToDB();">Post</button> </li> <!-- call post function-->
-										
-									</ul>
-							</div><!-- /navbar -->
-						</div> 
-			 </div> <!--page3 end post pic-->
 			 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

@@ -1,40 +1,47 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
+
 <html>
 <head>
 
-   <meta name="viewport" content="width=default-width; user-scalable=no" />
-   <meta http-equiv="Content-type" content="text/html;charset=utf-8">
- 
-   <title>Index Page</title>
- 
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>Profile Page</title>
+    <meta name="description" content="">
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="js/home.js"></script>
-	
-	  <!-- Bootstrap CSS -->
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./includes/css/bootstrap-glyphicons.css" rel="stylesheet">
-	
-	  <!-- Custom CSS -->
+
+    <!-- Custom CSS -->
     <link href="./includes/css/profile_styles.css" rel="stylesheet">
+
+    <!-- Include Modernizr in the head, before any other Javascript -->
+    <script src="./includes/js/modernizr-2.6.2.min.js"></script>
 	
-	<script type="text/javascript">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<script src="js/editProfile.js"></script>
+		
+		<script type="text/javascript">
 		window.onload = function() 
 		{
 			var value = window.localStorage.getItem("username");
 				
 				if(value == null)
 				 {
-					window.location = "initial.html";
+					window.location = "index.html";
 				 }
+				 
+				 
 		};
-	</script>
- 
+		</script>
+
 </head>
 <body>
- <div class="navbar navbar-fixed-top">
+	
+		 <div class="navbar navbar-fixed-top">
             <div class="container">
                 <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
@@ -87,9 +94,26 @@
         <br />
         <br />
         <br />
-<div id="posts"></div>
-
-    <nav class="navbar-bottom navbarFooter" id="navbarFooter" role="navigation">
+	
+	  
+		<div class="well">
+	  <div class="panel">
+	  <div class="panel-heading"><center><b>Update Information</b></center></div>
+	  <div class="panel-body">
+	  <form onsubmit="return updateProfile()">
+	    <input class="form-control" type="text" value="" id="username" placeholder="Username" readonly></input>
+	    <br/><input class="form-control" type="text" value="" id="name" placeholder="Name"></input>
+	    <br/><input class="form-control" type="text" value="" id="emailID" placeholder="Email ID"></input>
+		<br/><input class="form-control" type="text" value="" id="userpassword" placeholder="Password"></input>
+		<br/><input class="form-control" type="text" value="" id="bio" placeholder="Bio"></input>
+		<br/>
+		<center><input class="btn btn-info" type="submit" value="Update"></input></center>
+	  </form>
+	  </div>
+	  </div>
+	  </div>
+	   
+	     <nav class="navbar-bottom navbarFooter" id="navbarFooter" role="navigation">
         <div class="container">
             <div class="container">
                 <div class="row">
@@ -114,13 +138,16 @@
         </div>
     </nav>
 	
-	    <!-- First try for the online version of jQuery-->
-    <script src="http://code.jquery.com/jquery.js"></script>
-	
-	    <!-- Bootstrap JS -->
+	 <script type="text/javascript" src="cordova.js"></script>
+       
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    <!-- Bootstrap JS -->
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom JS -->
     <script src="./includes/js/script.js"></script>
 </body>
-</html> 
+</html>
+

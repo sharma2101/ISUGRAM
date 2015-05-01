@@ -1,0 +1,226 @@
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+#features{
+   text-align: center;   /*Design for panel*/
+}
+#features img{
+   margin: 0 0 20px;     /*Design for image in panel*/
+}
+#inputMessage{
+   margin-bottom: 15px;  /*Design for form in modal*/
+}
+
+footer{
+   background: #333; 
+   color: #eee;
+   font-size: 11px;
+   padding: 20px;
+
+}      /*Design for footer*/
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+body
+{
+ -webkit-font-smoothing: antialiased; 
+ text-rendering: optimizelegibility;
+}          /*Design for fonts of body*/
+
+
+ul.unstyled{
+   list-style:none;
+   padding: 0; 
+}          /*Design for ul in footer*/
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+
+.navbar-brand {
+   padding: 10px 13px;
+}         /*Design for navigation bar*/
+
+   
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+#myCarousel {margin-top: 60px;}
+/*Spacing for carousel spacing*/
+
+
+.carousel-caption{
+   font-size: 20px;
+}         /*Design for carousel caption*/
+
+
+.carousel-caption h4{
+   font-size: 32px;
+}
+
+#myCarousel .item { height:400px; }
+
+#slide1 {
+   background: url('../../images/carousel_medium_01.jpg') top left no-repeat;
+}
+#slide2 {
+   background: url('../../images/carousel_medium_02.jpg') top left no-repeat;
+}
+#slide3 {
+   background: url('../../images/carousel_medium_03.jpg') top left no-repeat;
+}        /*Default images for carousel*/
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+
+.tabbable img.thumbnail{
+   margin: 0 20px 10px 0;
+}        /*Image design for nav-tabs*/
+
+#moreInfo
+{
+   margin-bottom: 25px;
+}
+
+#listGroupTop{
+   font-size: 15px;
+   position:absolute;
+   top: -10px;
+   right: -5px;
+   padding: 10px;
+
+}/*Align logo sm screen*/
+
+
+#aligncenter{
+   text-align: center;
+   position:absolute;
+   top: 10px;
+   
+}/*Align logo sm screen*/
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+
+/* Portrait & landscape phone */
+@media (max-width: 240px) {
+   #myCarousel .item { height:200px;}
+
+   #features{
+   display: none;
+}/*Design to hide tabs for small screen*/
+
+   #featuresHeading{
+   display: none;
+} /*Design to hide tabs for small screen*/
+
+   #slide1 {
+   background: url('../../images/carousel_xsmall_01.jpg') top left no-repeat;
+}
+   #slide2 {
+   background: url('../../images/carousel_xsmall_02.jpg') top left no-repeat;
+}
+   #slide3 {
+   background: url('../../images/carousel_xsmall_03.jpg') top left no-repeat;
+}
+
+}
+
+@media (max-width: 480px) {
+   #myCarousel .item { height:200px; }
+
+#features{
+   display: none;
+}/*Design to hide tabs for small screen*/
+#featuresHeading{
+   display: none;
+}/*Design to hide tabs for small screen*/
+
+
+	
+#slide1 {
+   background: url('../../images/carousel_small_01.jpg') top left no-repeat;
+}
+#slide2 {
+   background: url('../../images/carousel_small_02.jpg') top left no-repeat;
+}
+#slide3 {
+   background: url('../../images/carousel_small_03.jpg') top left no-repeat;
+}
+
+
+#pushdown {
+   margin-top: 50px;
+   margin-bottom: 50px;
+}/*Design for nav-collapse*/ 
+}
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 768px) {
+   #myCarousel .item { height:310px; }
+
+
+#slide1 {
+   background: url('../../images/carousel_small_01.jpg') top left no-repeat;
+}
+#slide2 {
+   background: url('../../images/carousel_medium_02.jpg') top left no-repeat;
+}
+#slide3 {
+   background: url('../../images/carousel_medium_03.jpg') top left no-repeat;
+}
+
+.carousel-caption{
+   font-size: 16px;
+}
+
+.carousel-caption h4{
+   font-size: 20px;
+}
+
+#pushdown {
+   margin-top: 50px;
+   margin-bottom: 50px;
+} /*Design for nav-collapse*/ 
+  
+#featuresHeading{
+   display: none;
+}/*Design to hide tabs for small screen*/
+
+#features{
+   display: none;
+}/*Design to hide tabs for small screen*/
+}
+
+/* Large desktop */
+
+@media (min-width: 1200px) {
+   #myCarousel .item { height:500px; }
+
+   #myCarousel{
+      margin-top: 70px;
+   }
+
+#slide1 {
+   background: url('../../images/carousel_large_01.jpg') top left no-repeat;
+}
+#slide2 {
+   background: url('../../images/carousel_large_02.jpg') top left no-repeat;
+}
+#slide3 {
+   background: url('../../images/carousel_large_03.jpg') top left no-repeat;
+}
+
+	
+}
+
